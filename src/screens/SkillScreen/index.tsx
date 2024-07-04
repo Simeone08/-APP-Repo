@@ -1,30 +1,34 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
-import { AntDesign } from '@expo/vector-icons';
+import { View, Text, Image, ScrollView } from 'react-native';
+import { PhotoComponent } from '../../components/PhotoComponent';
+
+import { SkillComponents } from '../../components/SkillComponent';
 
 import { styles } from './styles';
 
-export function SkillScreen() {
+export function SkillScreen() { 
   return (
     <View style={styles.container}>
 
-      <View>
-        <Image 
-          source={{uri:'https://github.com/simeone08.png'}}
-          style={{ width: 150, height: 150, borderRadius: 150 }}
-        />
-      </View>
+      <PhotoComponent />
 
       <View>
-        <Text>Werles Simeone</Text>
+        <Text style={styles.text}> Werles Simeone </Text>
       </View>
 
-      <View>
-        <AntDesign 
-          name='star'
-          size={32}
-          color={'yellow'}
-        />
+      <View  style={styles.containerList}>
+        <ScrollView>
+          <SkillComponents title='HTML' rating={4}/>
+          <SkillComponents title='CSS' rating={4}/>
+          <SkillComponents title='Javascript' rating={4}/>
+          <SkillComponents title='React' rating={4}/>
+          <SkillComponents title='React Native' rating={4}/>
+          <SkillComponents title='Typescript' rating={3}/>
+          <SkillComponents title='NodeJS' rating={2}/>
+          <SkillComponents title='MySQL' rating={2}/>
+          <SkillComponents title='Oracle' rating={2}/>
+          <SkillComponents title='Kotlin' rating={3}/>
+        </ScrollView>
       </View>
     </View>
   );

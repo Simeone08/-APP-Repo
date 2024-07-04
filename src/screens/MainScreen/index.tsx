@@ -1,19 +1,16 @@
 import React from 'react';
-import { Image, Linking, Pressable, Text, View } from 'react-native';
+import { Linking, Pressable, Text, View } from 'react-native';
+import { PhotoComponent } from '../../components/PhotoComponent';
 
 import { AntDesign, MaterialCommunityIcons } from '@expo/vector-icons';
+
 import { styles } from './styles';
 
 export function MainScreen() {
   return (
     <View style={styles.container}>
 
-      <View style={styles.photo}>
-        <Image 
-          source={{uri:'https://github.com/simeone08.png'}}
-          style={{ width: 150, height: 150, borderRadius: 150 }}
-        />
-      </View>
+      <PhotoComponent />
 
       <View>
         <Text style={styles.name}>Werles Simeone</Text>

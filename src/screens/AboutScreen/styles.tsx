@@ -6,11 +6,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     alignItems: 'center',
   },
-  text:{
-    fontSize: 25
-  },
-  containerList: {
-    height: 400,
-    width: '90%',
+  text: {
+    fontSize: 20
   },
 });
